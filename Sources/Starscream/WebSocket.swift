@@ -360,7 +360,7 @@ open class WebSocket : NSObject, StreamDelegate, WebSocketClient, WSStreamDelega
     let headerWSConnectionValue = "Upgrade"
     let headerWSProtocolName    = "Sec-WebSocket-Protocol"
     let headerWSVersionName     = "Sec-WebSocket-Version"
-    let headerWSVersionValue    = "13"
+    let headerWSVersionValue    = "14"
     let headerWSExtensionName   = "Sec-WebSocket-Extensions"
     let headerWSKeyName         = "Sec-WebSocket-Key"
     let headerOriginName        = "Origin"
