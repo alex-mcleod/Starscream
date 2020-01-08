@@ -360,7 +360,7 @@ open class WebSocket : NSObject, StreamDelegate, WebSocketClient, WSStreamDelega
     let headerWSConnectionValue = "Upgrade"
     let headerWSProtocolName    = "Sec-WebSocket-Protocol"
     let headerWSVersionName     = "Sec-WebSocket-Version"
-    let headerWSVersionValue    = "14"
+    let headerWSVersionValue    = "13"
     let headerWSExtensionName   = "Sec-WebSocket-Extensions"
     let headerWSKeyName         = "Sec-WebSocket-Key"
     let headerOriginName        = "Origin"
@@ -597,8 +597,8 @@ open class WebSocket : NSObject, StreamDelegate, WebSocketClient, WSStreamDelega
             let val = "permessage-deflate; client_max_window_bits; server_max_window_bits=15"
             request.setValue(val, forHTTPHeaderField: headerWSExtensionName)
         }
-        let hostValue = request.allHTTPHeaderFields?[headerWSHostName] ?? "\(url.host!):\(port!)"
-        request.setValue(hostValue, forHTTPHeaderField: headerWSHostName)
+        // let hostValue = request.allHTTPHeaderFields?[headerWSHostName] ?? "\(url.host!):\(port!)"
+        // request.setValue(hostValue, forHTTPHeaderField: headerWSHostName)
 
         var path = url.absoluteString
         let offset = (url.scheme?.count ?? 2) + 3
